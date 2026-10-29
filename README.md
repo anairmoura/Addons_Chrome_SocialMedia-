@@ -2,9 +2,9 @@
 Add-ons created for Google Chrome to scape social Media Information
 
 ## Install: 
-> Open Google Chrome extention page
-> select Dev Mode
-> Upload all the content in the files
+>> Open Google Chrome extention page
+>> select Dev Mode
+>> Upload all the content in the files
 
 ## X: 
 For X / Twitter content scrape
