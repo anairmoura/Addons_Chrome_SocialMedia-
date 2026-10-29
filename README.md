@@ -15,3 +15,8 @@ For Instagram + TikTok + Facebook scrape
 
 ## LinkedIn 
 For LinkedIn profile and pages content scrape 
+
+# Great for get data from Social Media Platforms. 
+Social Media Marketing, Social Media Data Analysis. 
+Competitors Data Analysis. 
+*Free for download* Use with moderation. 
