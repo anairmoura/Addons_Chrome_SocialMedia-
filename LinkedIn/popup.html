@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>LinkedIn Feed Tracker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" />
+    <h1>LinkedIn Feed Tracker</h1>
+  </header>
+
+  <main>
+    <div class="stat">
+      <span id="count">0</span>
+      <span class="label">posts collected</span>
+    </div>
+
+    <div id="breakdown" class="breakdown"></div>
+
+    <div class="actions">
+      <button id="exportBtn" class="primary">Export to CSV</button>
+      <button id="clearBtn" class="secondary">Clear data</button>
+    </div>
+
+    <p class="hint">
+      Scroll through your LinkedIn feed or a profile timeline with this tab
+      open — posts are collected automatically in the background. Come back
+      here anytime to export what's been gathered so far.
+    </p>
+  </main>
+</body>
+<script src="popup.js"></script>
+</html>
