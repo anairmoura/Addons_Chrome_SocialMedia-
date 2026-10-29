@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>X Engagement Tracker</title>
+<style>
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    width: 300px;
+    padding: 16px;
+    background: #0f1419;
+    color: #e7e9ea;
+  }
+  h1 {
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+  p.sub {
+    font-size: 12px;
+    color: #71767b;
+    margin: 0 0 16px;
+    line-height: 1.4;
+  }
+  .stat {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d9bf0;
+    margin-bottom: 2px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #71767b;
+    margin-bottom: 16px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-family: inherit;
+  }
+  #exportBtn {
+    background: #1d9bf0;
+    color: #fff;
+  }
+  #exportBtn:hover {
+    background: #1a8cd8;
+  }
+  #clearBtn {
+    background: transparent;
+    color: #f4212e;
+    border: 1px solid #536471;
+  }
+  #clearBtn:hover {
+    background: rgba(244, 33, 46, 0.1);
+  }
+  #status {
+    font-size: 12px;
+    color: #71767b;
+    margin-top: 8px;
+    min-height: 14px;
+  }
+</style>
+</head>
+<body>
+  <h1>X Engagement Tracker</h1>
+  <p class="sub">Browse X/Twitter normally and just scroll. Posts that appear on screen are captured automatically in the background.</p>
+  <div class="stat" id="count">0</div>
+  <div class="stat-label">posts captured</div>
+  <button id="exportBtn">Export to Excel</button>
+  <button id="clearBtn">Clear captured data</button>
+  <div id="status"></div>
+  <script src="lib/xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
