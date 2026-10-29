@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "Social Content Tracker",
+  "version": "1.0.0",
+  "description": "Regista publicações, likes e comentários de perfis de Facebook, Instagram, LinkedIn, X e tik tok enquanto navegas, e gera relatórios mensais em Excel.",
+  "permissions": ["storage", "unlimitedStorage", "activeTab", "scripting", "downloads"],
+  "host_permissions": [
+    "https://www.facebook.com/*",
+    "https://*.facebook.com/*",
+    "https://facebook.com/*",
+    "https://www.instagram.com/*",
+    "https://www.linkedin.com/*",
+    "https://*.linkedin.com/*",
+    "https://linkedin.com/*",
+    "https://x.com/*",
+    "https://twitter.com/*", 
+    "https://www.tiktok.com/*", 
+    "https://*.tiktok.com/*", 
+    "https://tiktok.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*","https://*.facebook.com/*", "https://facebook.com/*"],
+      "js": ["content_scripts/common.js", "content_scripts/facebook.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content_scripts/common.js", "content_scripts/instagram.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.linkedin.com/*", "https://*.linkedin.com/*", "https://linkedin.com/*"],
+      "js": ["content_scripts/common.js", "content_scripts/linkedin.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content_scripts/common.js", "content_scripts/x.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.tiktok.com/*", "https://*.tiktok.com/*", "https://tiktok.com/*"],
+      "js": ["content_scripts/common.js", "content_scripts/tiktok.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

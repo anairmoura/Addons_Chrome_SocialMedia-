@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Social Content Tracker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Social Content Tracker</h1>
+    <p class="subtitle">Navega normalmente nos perfis — a captura acontece sozinha.</p>
+  </header>
+
+  <section class="status-card">
+    <div class="stat">
+      <span class="stat-value" id="totalPosts">0</span>
+      <span class="stat-label">publicações capturadas</span>
+    </div>
+  </section>
+
+  <section id="breakdown" class="breakdown"></section>
+
+  <section class="actions">
+    <button id="exportBtn" class="primary">Exportar relatório Excel</button>
+    <button id="refreshBtn" class="secondary">Atualizar</button>
+    <button id="clearBtn" class="danger">Limpar todos os dados</button>
+  </section>
+
+  <footer>
+    <p>Redes suportadas: Facebook, Instagram, LinkedIn, X. Abre o perfil pretendido e faz scroll manualmente — sem automação de cliques.</p>
+  </footer>
+
+  <script src="lib/xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
